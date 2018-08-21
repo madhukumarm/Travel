@@ -9,7 +9,7 @@ let createUser = (req,callback) => {
             let query = { email: req.body.email }
             Service.UserService.getUser(query, {}, {}, (err,data) => {
                 if(err) {
-
+                    cb(Config.APP_CONSTANTS.STATUS_MSG.ERROR.MONGO_ERROR)
                 }
                 else {
                     if(data.length > 0) {
@@ -27,7 +27,7 @@ let createUser = (req,callback) => {
             dataToSave = req.body;
             Service.UserService.createUser(dataToSave,(err,data) => {
                 if(err) {
-                    cb(webkitConvertPointFromPageToNode.APP_CONSTANTS.STATUS_MSG.ERROR.MONGO_ERROR)
+                    cb(Config.APP_CONSTANTS.STATUS_MSG.ERROR.TEMP_ERROR)
                 }
                 else {
                     userData = data
