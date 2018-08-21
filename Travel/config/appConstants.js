@@ -14,8 +14,8 @@ const STATUS_MSG = {
         },
         CREATE_USER_ERROR: {
             statusCode:400,
-            customMessage: 'error while creating user',
-            type: "CREATE_USER_ERROR"
+            customMessage: 'Error while creating user',
+            type: "MONGO_ERROR"
         }
 
     }

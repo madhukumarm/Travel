@@ -27,7 +27,7 @@ let createUser = (req,callback) => {
             dataToSave = req.body;
             Service.UserService.createUser(dataToSave,(err,data) => {
                 if(err) {
-                    cb(Config.APP_CONSTANTS.STATUS_MSG.ERROR.TEMP_ERROR)
+                    cb(Config.APP_CONSTANTS.STATUS_MSG.ERROR.CREATE_USER_ERROR)
                 }
                 else {
                     userData = data
