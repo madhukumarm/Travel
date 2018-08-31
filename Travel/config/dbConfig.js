@@ -1,4 +1,4 @@
 module.exports = {
-    mongoURI: "mongodb://madhu:Dm9448077369@ds247587.mlab.com:47587/travelguide"
+    mongoURI: "mongodb://127.0.0.1:2000/travelguide"
     
 }
